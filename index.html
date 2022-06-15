@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Convite lina</title>
+</head>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,700;1,400&family=Signika+Negative:wght@600&display=swap" rel="stylesheet">
+<style>
+    .convite {
+        font-family: 'Roboto', sans-serif;
+        font-family: 'Signika Negative', sans-serif;
+        color: #ffffff;
+        text-align: center;
+        max-width: 600px;
+        background: #db7fd4;
+        filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+        border-radius: 30px;
+        padding: 30px
+    }
+    
+    .info_data_contagem {
+        background: #ffffff46;
+        border-radius: 15px;
+        padding: 15px;
+    }
+    
+    .flores>img {
+        width: 100%;
+        filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+        margin-bottom: -90px;
+    }
+    
+    .setas>img {
+        max-width: 300px;
+        margin-top: -20px;
+        filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+    }
+    
+    .descricao {
+        font-size: 16px;
+        font-weight: 300;
+    }
+    
+    .info_data {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        margin: 30px;
+    }
+    
+    body {
+        width: 100%;
+        height: 100vh;
+        background: linear-gradient(to right, midnightblue, firebrick, springgreen);
+        background-size: 500% 100%;
+        font-size: 20px;
+        font-weight: 800;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-image: url("data:image/svg+xml,<svg id='patternId' width='100%' height='100%' xmlns='http://www.w3.org/2000/svg'><defs><pattern id='a' patternUnits='userSpaceOnUse' width='40' height='40' patternTransform='scale(5) rotate(125)'><rect x='0' y='0' width='100%' height='100%' fill='hsla(173,81.2%,83.3%,1)'/><path d='M27.26 5.415c-.55 0-.9.55-.65 1l2.45 4.75c.2.5.85.5 1.15.1l3.15-4.5c.3-.4 0-1.05-.55-1.1zM10.689 8.068c-.406-.051-.822.31-.778.748l.5 5.3c.05.5.6.8 1.05.5l4.55-3.05c.45-.3.4-.95-.05-1.15l-5.1-2.3a.605.605 0 0 0-.172-.048zM2.406 24.584a.635.635 0 0 0-.345.081l-4.75 2.4c-.45.2-.5.85-.1 1.15l4.45 3.15c.4.3 1 0 1.1-.5l.3-5.55c0-.412-.31-.712-.655-.73zm40 0a.635.635 0 0 0-.345.081l-4.75 2.4c-.45.2-.5.85-.1 1.15l4.45 3.15c.4.3 1 0 1.1-.5l.3-5.55c0-.412-.31-.712-.655-.73zm-22.17 3.108a.744.744 0 0 0-.675.723l.4 5.55c.05.5.6.8 1.05.5l4.45-2.95c.45-.25.4-.9-.05-1.15l-4.8-2.6a.702.702 0 0 0-.376-.073z'  stroke-width='1' stroke='none' fill='hsla(342,67.3%,90.4%,1)'/></pattern></defs><rect width='800%' height='800%' transform='translate(0,0)' fill='url(%23a)'/></svg>")
+    }
+    
+    .info_data_dia {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+</style>
+
+<body>
+    <div class="convite">
+        <div class="flores">
+            <img src="img/rainbow-clipart-35.png" alt="">
+
+        </div>
+
+        <h2>Chá fralda (P,M ou G) </h2>
+        <h1>Lina Maria</h1>
+        <div class="setas"><img src="img/transparent-heart-arrow-cute-hand-drawn-arrow-5f26b73ba43473 1 1.png" alt=""></div>
+
+        <div class="descricao">A mamãe e o papai resolveram fazer uma renuiãozinha para comemorar minha chegada. <br> Espero vocês para meu chá de fraldas.</div>
+        <div class="info">
+            <div class="info_data">
+
+                <div class="info_data_contagem">
+                    <div id="clockdiv">
+                        Contagem Regreciva <br>
+                        <span class="days"></span> Dias <br><span class="hours"> </span> hrs <br> min: <span class="minutes"></span>:<span class="seconds"></span>s
+                    </div>
+                </div>
+                <div class="info_data_dia"><img width="30px" src="img/kisspng-computer-icons-calendar-date-wedding-ceremony-5ad91b6966ff95.7443044915241777694219.png" alt=""> Data: 09/07/2022 as 19:30</div>
+            </div>
+            <div class="info_endereco">
+
+                <b>Endereço:</b> <br> Goiânia/GO <br> Rua: Pocema s/n <br> Cond. paineiras II: Parque Amazônia (Salão de festa)
+
+            </div>
+
+        </div>
+
+        <div class="flores">
+            <img src="img/flores.png" alt="">
+        </div>
+
+
+
+        <script>
+            function getTimeRemaining(endtime) {
+                var t = Date.parse(endtime) - Date.parse(new Date());
+                var seconds = Math.floor((t / 1000) % 60);
+                var minutes = Math.floor((t / 1000 / 60) % 60);
+                var hours = Math.floor((t / (1000 * 60 * 60)) % 24);
+                var days = Math.floor(t / (1000 * 60 * 60 * 24));
+                return {
+                    'total': t,
+                    'days': days,
+                    'hours': hours,
+                    'minutes': minutes,
+                    'seconds': seconds
+                };
+            }
+
+            function initializeClock(id, endtime) {
+                var clock = document.getElementById(id);
+                var daysSpan = clock.querySelector('.days');
+                var hoursSpan = clock.querySelector('.hours');
+                var minutesSpan = clock.querySelector('.minutes');
+                var secondsSpan = clock.querySelector('.seconds');
+
+                function updateClock() {
+                    var t = getTimeRemaining(endtime);
+
+                    daysSpan.innerHTML = t.days;
+                    hoursSpan.innerHTML = ('0' + t.hours).slice(-2);
+                    minutesSpan.innerHTML = ('0' + t.minutes).slice(-2);
+                    secondsSpan.innerHTML = ('0' + t.seconds).slice(-2);
+
+                    if (t.total <= 0) {
+                        clearInterval(timeinterval);
+                    }
+                }
+
+                updateClock();
+                var timeinterval = setInterval(updateClock, 1000);
+            }
+
+            var deadline = 'July 09 2022 19:30:00 GMT-3';
+            initializeClock('clockdiv', deadline);
+        </script>
+</body>
+
+</html>
